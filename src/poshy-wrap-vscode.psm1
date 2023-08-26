@@ -3,7 +3,7 @@ $ErrorActionPreference = "Stop"
 Set-StrictMode -Version Latest
 
 
-if ((-not $Env:VSCODE) -and (-not (Test-Command code))) {
+if ((-not $Env:VSCODE) -and (-not (Test-Command code)) -and (-not $Global:PWSHRC_FORCE_MODULES_EXPORT_UNSUPPORTED)) {
     return
 }
 
